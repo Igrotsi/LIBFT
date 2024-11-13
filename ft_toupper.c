@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 14:48:53 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/13 13:21:38 by flahalle         ###   ########.fr       */
+/*   Created: 2024/11/13 17:54:21 by flahalle          #+#    #+#             */
+/*   Updated: 2024/11/13 18:02:51 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (src[i] != '\0' && i + 1 < size)
+	if (c >= 'a' && c <= 'z')
 	{
-		dest[i] = src[i];
-		i++;
+		c = c - 32;
+		return (c);
 	}
-	if (size > 0)
-		dest[i] = '\0';
-	return (ft_strlen(src));
+	return (c);
 }

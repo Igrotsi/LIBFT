@@ -6,19 +6,13 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:59:22 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/06 15:05:13 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:17:42 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int i)
 {
 	return (i >= 32 && i <= 126);
-}
-
-int	main(void)
-{
-	printf("%d", ft_isprint('q'));
-	return (0);
 }

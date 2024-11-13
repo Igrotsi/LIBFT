@@ -6,19 +6,14 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:22:53 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/06 14:50:40 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:14:09 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int i)
 {
-	return((i >= '0' && i <= '9') || (i >= 'Z' && i <= 'A') || (i >= 'a' && i <= 'z'));
-}
-
-int     main(void)
-{
-	printf("%d", ft_isalnum('#'));
-	return (0);
+	return ((i >= '0' && i <= '9')
+		|| (i <= 'Z' && i >= 'A') || (i >= 'a' && i <= 'z'));
 }

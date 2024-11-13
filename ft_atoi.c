@@ -6,14 +6,13 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:04:38 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/07 14:24:42 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/13 13:22:59 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	conv;
@@ -38,10 +37,4 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (result * conv);
-}
-
-int	main(void)
-{
-	printf("%d \n", ft_atoi("-123474ab567"));
-	printf("%d", atoi("-123474ab567")); 
 }

@@ -6,19 +6,13 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:02:24 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/06 13:22:13 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:19:47 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int     ft_isdigit(int i)
+int	ft_isdigit(int i)
 {
-        return (i >= '0' && i <= '9');
-}
-
-int     main(void)
-{
-        printf("%d", ft_isdigit('1'));
-        return (0);
+	return (i >= '0' && i <= '9');
 }

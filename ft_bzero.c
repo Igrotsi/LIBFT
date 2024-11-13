@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 14:48:53 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/13 13:21:38 by flahalle         ###   ########.fr       */
+/*   Created: 2024/11/13 15:46:26 by flahalle          #+#    #+#             */
+/*   Updated: 2024/11/13 16:14:08 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str;
 
 	i = 0;
-	while (src[i] != '\0' && i + 1 < size)
+	str = (unsigned char *)s;
+	while (i < n)
 	{
-		dest[i] = src[i];
+		str[i] = 0;
 		i++;
 	}
-	if (size > 0)
-		dest[i] = '\0';
-	return (ft_strlen(src));
 }

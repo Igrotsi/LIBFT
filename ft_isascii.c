@@ -6,19 +6,13 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:51:06 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/06 14:58:45 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:17:36 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isascii(int i)
 {
 	return (i >= 0 && i <= 127);
-}
-
-int	main(void)
-{
-	printf("%d", ft_isascii(128));
-	return (0);
 }
