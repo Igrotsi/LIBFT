@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 18:07:52 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/15 15:22:48 by flahalle         ###   ########.fr       */
+/*   Created: 2024/11/15 19:54:59 by flahalle          #+#    #+#             */
+/*   Updated: 2024/11/15 20:01:28 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	c = (unsigned char)c;
-	while (s[i])
-	{
-		if (((unsigned char *)s)[i] == c)
-			return ((void *)(s + i));
-		i++;
-	}
-	if (c == '\0')
-		return ((void *)(s + i));
-	return (0);
+	len = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	
 }

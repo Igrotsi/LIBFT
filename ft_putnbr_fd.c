@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 18:07:52 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/15 15:22:48 by flahalle         ###   ########.fr       */
+/*   Created: 2024/11/15 15:46:49 by flahalle          #+#    #+#             */
+/*   Updated: 2024/11/15 16:30:18 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	c = (unsigned char)c;
-	while (s[i])
+	if (n == -2147483648)
 	{
-		if (((unsigned char *)s)[i] == c)
-			return ((void *)(s + i));
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	if (c == '\0')
-		return ((void *)(s + i));
-	return (0);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = n * -1;
+	}
+	if (n >= 0 && n < 10)
+	{
+		ft_putchar_fd(n + '0', fd);
+	}
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }
