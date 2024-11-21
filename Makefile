@@ -1,7 +1,7 @@
 NAME 		= 	libft.a
 CC 		= 	gcc
 HEAD		=	libft.h
-CFLAGS 		= 	-Wall -Werror -Wextra
+CFLAGS 		= 	-Wall -Werror -Wextra -g
 SRC 		= 	ft_atoi.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
