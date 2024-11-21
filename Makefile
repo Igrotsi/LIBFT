@@ -36,7 +36,8 @@ SRC 		= 	ft_atoi.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_itoa.c \
-			ft_memset.c 
+			ft_memset.c \
+			ft_split.c 
 # SRC_BONUS	=	
 
 OBJ 		= 	$(SRC:.c=.o)
