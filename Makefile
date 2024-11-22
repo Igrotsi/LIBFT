@@ -38,10 +38,18 @@ SRC 		= 	ft_atoi.c \
 			ft_itoa.c \
 			ft_memset.c \
 			ft_split.c 
-# SRC_BONUS	=	
+SRC_BONUS	=	ft_lstnew_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c \
+			ft_lstadd_front_bonus.c
 
 OBJ 		= 	$(SRC:.c=.o)
-# OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
+OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
 
 all: 			$(NAME)
 
@@ -51,8 +59,8 @@ $(NAME): 		$(OBJ) Makefile
 %.o: %.c		$(HEAD)
 				$(CC) $(CFLAGS) -c $< -o $@
 
-#bonus:			$(OBJ) $(OBJ_BONUS)
-#				ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
+bonus:			$(OBJ) $(OBJ_BONUS)
+				ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 
 clean:
 				rm -f $(OBJ)
