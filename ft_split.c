@@ -6,7 +6,7 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:26:15 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/22 16:26:17 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:49:55 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static char	*split_word(char const *s, char c)
 	j = 0;
 	while (s[i] != c && s[i])
 		i++;
-	split_word = malloc(sizeof(char) * (i + 1));
+	split_word = ft_calloc(sizeof(char), (i + 1));
 	if (split_word == NULL)
 		return (NULL);
 	while (j < i)
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	big_array = malloc(sizeof(char *) * (count_c(s, c) + 1));
+	big_array = ft_calloc(sizeof(char *), (count_c(s, c) + 1));
 	if (!big_array)
 		return (NULL);
 	while (*s)

@@ -6,7 +6,7 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:36:53 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/25 16:25:23 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:43:28 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

@@ -6,7 +6,7 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 18:07:52 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/15 15:22:48 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/25 17:54:40 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((void *)(s + i));
-	return (0);
+	return (NULL);
 }

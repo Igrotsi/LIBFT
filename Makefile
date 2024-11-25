@@ -1,5 +1,5 @@
 NAME 		= 	libft.a
-CC 		= 	gcc
+CC 		= 	cc
 HEAD		=	libft.h
 CFLAGS 		= 	-Wall -Werror -Wextra -g
 SRC 		= 	ft_atoi.c \
@@ -48,15 +48,15 @@ SRC_BONUS	=	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstmap_bonus.c 
 
-OBJ 		= 	$(SRC:.c=.o)
-OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
+OBJ 		= 	$(SRC:%.c=%.o)
+OBJ_BONUS	=	$(SRC_BONUS:%.c=%.o)
 
 all: 			$(NAME)
 
-$(NAME): 		$(OBJ) Makefile
+$(NAME): 		$(OBJ)
 				ar rcs $(NAME) $(OBJ)
 
-%.o: %.c		$(HEAD)
+%.o: %.c		$(HEAD) Makefile
 				$(CC) $(CFLAGS) -c $< -o $@
 
 bonus:			$(OBJ) $(OBJ_BONUS)

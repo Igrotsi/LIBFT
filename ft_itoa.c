@@ -6,7 +6,7 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:55:26 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/20 20:15:50 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:39:27 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ char	*ft_itoa(int n)
 
 	nb = (long)n;
 	len = digits(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
 	if (nb < 0)
 	{
 		str[0] = '-';
