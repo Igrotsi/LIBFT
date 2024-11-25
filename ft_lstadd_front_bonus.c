@@ -6,7 +6,7 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:36:52 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/22 18:34:48 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:31:58 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (*lst == NULL)
-	{
-		*lst = new;
-	}
 	if (new != NULL)
 	{
 		new->next = *lst;

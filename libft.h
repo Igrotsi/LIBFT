@@ -6,7 +6,7 @@
 /*   By: flahalle <flahalle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 09:57:20 by flahalle          #+#    #+#             */
-/*   Updated: 2024/11/22 20:25:02 by flahalle         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:33:53 by flahalle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ size_t				ft_strlcpy(char *dest, const char *srr, size_t size);
 size_t				ft_strlen(const char *str);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
 #endif
